@@ -1,0 +1,5 @@
+{
+  "rewrites": [
+    { "source": "/", "destination": "/workshop-22-martie-2026.html" }
+  ]
+}
