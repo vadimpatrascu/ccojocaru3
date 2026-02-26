@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Workshop 22 Martie 2026 — Cristina Mihaela Cojocaru</title>
+<meta name="description" content="Workshop de claritate: Cum te influențează 2026 și ce poți face concret. Numerologie, EFT, Access Bars. Cristina Mihaela Cojocaru — Coach Spiritual & Holistic." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet" />
+
+<style>
+/* ─── CSS CUSTOM PROPERTIES ─────────────────────────────── */
+:root {
+  --rose:       #F2DADA;
+  --blush:      #F5EAE8;
+  --cream:      #FAF7F4;
+  --burgundy:   #7B2035;
+  --burgundy-d: #5A1626;
+  --gold:       #C9A96E;
+  --gold-l:     #E0C99A;
+  --gold-d:     #A07840;
+  --text:       #2E1A1A;
+  --text-mid:   #5C3A3A;
+  --text-light: #8B6060;
+  --white:      #FFFDF9;
+
+  --ff-display: 'Playfair Display', Georgia, serif;
+  --ff-cormo:   'Cormorant Garamond', Georgia, serif;
+  --ff-body:    'Lato', sans-serif;
+
+  --nav-h: 64px;
+  --max-w: 1120px;
+  --section-gap: 120px;
+}
+
+/* ─── RESET & BASE ───────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--ff-body);
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+
+/* ─── NOISE TEXTURE OVERLAY ──────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9999;
+  opacity: .4;
+}
+
+/* ─── STICKY NAV ─────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: var(--nav-h);
+  background: rgba(250, 247, 244, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(201,169,110,.2);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 clamp(1.5rem, 5vw, 3rem);
+  transition: box-shadow .3s;
+}
+.nav.scrolled { box-shadow: 0 4px 32px rgba(123,32,53,.08); }
+
+.nav-brand {
+  font-family: var(--ff-display);
+  font-size: .9rem;
+  color: var(--burgundy);
+  letter-spacing: .04em;
+  line-height: 1.3;
+}
+.nav-brand span {
+  display: block;
+  font-family: var(--ff-body);
+  font-size: .7rem;
+  color: var(--text-light);
+  font-weight: 300;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.nav-date {
+  font-family: var(--ff-body);
+  font-size: .75rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  display: none;
+}
+@media (min-width: 640px) { .nav-date { display: block; } }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-family: var(--ff-body);
+  font-size: .78rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  padding: .65rem 1.4rem;
+  border-radius: 2px;
+  cursor: pointer;
+  border: none;
+  transition: all .3s ease;
+}
+.btn-primary {
+  background: var(--burgundy);
+  color: var(--white);
+  position: relative;
+  overflow: hidden;
+}
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 40%, rgba(201,169,110,.4) 50%, transparent 60%);
+  transform: translateX(-100%);
+  animation: shimmer 2.8s ease infinite;
+}
+@keyframes shimmer {
+  0%   { transform: translateX(-100%); }
+  50%  { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+.btn-primary:hover { background: var(--burgundy-d); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(123,32,53,.25); }
+
+.btn-gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold-d));
+  color: var(--white);
+  font-size: .85rem;
+  padding: .9rem 2.2rem;
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-gold::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%);
+  transform: translateX(-100%);
+  animation: shimmer 2.4s ease-in-out 1s infinite;
+}
+.btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 30px rgba(160,120,64,.35); }
+
+/* ─── HERO ───────────────────────────────────────────────── */
+.hero {
+  min-height: 100vh;
+  padding-top: var(--nav-h);
+  background:
+    radial-gradient(ellipse 80% 60% at 15% 20%, rgba(242,218,218,.55) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 90% 80%, rgba(201,169,110,.12) 0%, transparent 55%),
+    radial-gradient(ellipse 40% 40% at 80% 10%, rgba(123,32,53,.06) 0%, transparent 50%),
+    var(--cream);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* decorative orbits */
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(201,169,110,.25);
+  pointer-events: none;
+}
+.hero-orb-1 { width: 520px; height: 520px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: orbPulse 6s ease-in-out infinite; }
+.hero-orb-2 { width: 360px; height: 360px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: orbPulse 6s ease-in-out .8s infinite; }
+.hero-orb-3 { width: 200px; height: 200px; top: 50%; left: 50%; transform: translate(-50%,-50%); animation: orbPulse 6s ease-in-out 1.6s infinite; }
+@keyframes orbPulse {
+  0%, 100% { opacity: .25; transform: translate(-50%,-50%) scale(1); }
+  50%       { opacity: .5;  transform: translate(-50%,-50%) scale(1.03); }
+}
+
+/* corner botanicals */
+.hero-corner {
+  position: absolute;
+  width: 220px;
+  opacity: .12;
+  pointer-events: none;
+}
+.hero-corner-tl { top: 80px;  left: -20px;  transform: rotate(-15deg); }
+.hero-corner-br { bottom: 40px; right: -20px; transform: rotate(165deg); }
+
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: clamp(3rem, 8vw, 6rem) 1.5rem;
+}
+
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  font-family: var(--ff-body);
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: 1.8rem;
+  opacity: 0;
+  animation: fadeUp .8s ease .2s forwards;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.hero-badge {
+  display: inline-block;
+  background: rgba(123,32,53,.08);
+  border: 1px solid rgba(123,32,53,.18);
+  color: var(--burgundy);
+  font-family: var(--ff-body);
+  font-size: .72rem;
+  font-weight: 700;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  padding: .4rem 1.1rem;
+  border-radius: 1px;
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp .8s ease .4s forwards;
+}
+
+.hero-title {
+  font-family: var(--ff-display);
+  font-size: clamp(2.4rem, 7vw, 5rem);
+  font-weight: 600;
+  color: var(--burgundy);
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  opacity: 0;
+  animation: fadeUp .9s ease .6s forwards;
+}
+.hero-title em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--gold-d);
+}
+
+.hero-subtitle {
+  font-family: var(--ff-cormo);
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  font-style: italic;
+  color: var(--text-mid);
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeUp .9s ease .8s forwards;
+}
+
+.hero-divider {
+  width: 64px;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 2rem;
+  opacity: 0;
+  animation: fadeUp .8s ease .9s forwards;
+}
+
+.hero-hook {
+  font-size: clamp(.95rem, 2vw, 1.05rem);
+  color: var(--text-mid);
+  font-weight: 300;
+  max-width: 520px;
+  margin: 0 auto 2.5rem;
+  opacity: 0;
+  animation: fadeUp .9s ease 1s forwards;
+}
+
+.hero-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  opacity: 0;
+  animation: fadeUp .9s ease 1.1s forwards;
+}
+
+/* Countdown */
+.countdown {
+  display: flex;
+  gap: clamp(.6rem, 2vw, 1.2rem);
+  justify-content: center;
+  margin-top: .5rem;
+}
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 56px;
+}
+.countdown-num {
+  font-family: var(--ff-display);
+  font-size: clamp(1.6rem, 4vw, 2.4rem);
+  font-weight: 600;
+  color: var(--burgundy);
+  line-height: 1;
+}
+.countdown-label {
+  font-size: .62rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-top: .3rem;
+}
+.countdown-sep {
+  font-family: var(--ff-display);
+  font-size: clamp(1.4rem, 3.5vw, 2rem);
+  color: var(--gold);
+  align-self: center;
+  margin-bottom: .4rem;
+}
+.countdown-label-outer {
+  font-size: .72rem;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: .8rem;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(22px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ─── LAYOUT HELPERS ─────────────────────────────────────── */
+.section {
+  padding: var(--section-gap) clamp(1.5rem, 5vw, 3rem);
+}
+.container { max-width: var(--max-w); margin: 0 auto; }
+
+.section-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: 1rem;
+}
+.section-eyebrow::before {
+  content: '';
+  display: block;
+  width: 28px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-family: var(--ff-display);
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  color: var(--burgundy);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.section-title em { font-style: italic; font-weight: 400; }
+
+.section-lead {
+  font-family: var(--ff-cormo);
+  font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+  color: var(--text-mid);
+  font-style: italic;
+  max-width: 620px;
+  line-height: 1.7;
+}
+
+/* Reveal animations */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+.reveal-delay-1 { transition-delay: .1s; }
+.reveal-delay-2 { transition-delay: .2s; }
+.reveal-delay-3 { transition-delay: .3s; }
+.reveal-delay-4 { transition-delay: .4s; }
+.reveal-delay-5 { transition-delay: .5s; }
+
+/* ─── INTRO BAND ─────────────────────────────────────────── */
+.intro-band {
+  background: var(--burgundy);
+  color: var(--white);
+  padding: clamp(2.5rem, 6vw, 4rem) clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.intro-band::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23C9A96E' fill-opacity='0.06'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+.intro-band-inner {
+  position: relative;
+  max-width: 780px;
+  margin: 0 auto;
+}
+.intro-band-label {
+  font-size: .7rem;
+  letter-spacing: .25em;
+  text-transform: uppercase;
+  color: var(--gold-l);
+  margin-bottom: 1.2rem;
+}
+.intro-band-text {
+  font-family: var(--ff-cormo);
+  font-size: clamp(1.3rem, 3vw, 1.9rem);
+  font-style: italic;
+  color: var(--white);
+  line-height: 1.55;
+  margin-bottom: 1.4rem;
+}
+.intro-band-accent {
+  font-family: var(--ff-display);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  font-weight: 600;
+  color: var(--gold-l);
+  letter-spacing: .04em;
+}
+
+/* ─── PAIN POINTS ────────────────────────────────────────── */
+.pain-section {
+  background: var(--blush);
+  padding: var(--section-gap) clamp(1.5rem, 5vw, 3rem);
+}
+.pain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+.pain-card {
+  background: var(--white);
+  border: 1px solid rgba(201,169,110,.2);
+  padding: 2rem 1.75rem;
+  border-radius: 2px;
+  position: relative;
+  transition: box-shadow .3s, transform .3s;
+}
+.pain-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold), var(--burgundy));
+  border-radius: 2px 0 0 2px;
+}
+.pain-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(123,32,53,.1); }
+.pain-card-icon {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+.pain-card-text {
+  font-size: .95rem;
+  color: var(--text-mid);
+  font-style: italic;
+  font-family: var(--ff-cormo);
+  font-size: 1.05rem;
+  line-height: 1.55;
+}
+
+/* ─── HOST / ABOUT ───────────────────────────────────────── */
+.host-section {
+  background: var(--cream);
+}
+.host-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .host-layout { grid-template-columns: 280px 1fr; gap: 4rem; }
+}
+
+.host-photo-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.host-photo {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--rose), var(--blush));
+  border: 4px solid transparent;
+  background-clip: padding-box;
+  box-shadow:
+    0 0 0 4px var(--gold),
+    0 0 0 8px rgba(201,169,110,.15),
+    0 20px 40px rgba(123,32,53,.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  font-size: 5rem;
+  flex-shrink: 0;
+}
+.host-photo-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, var(--rose) 0%, var(--blush) 100%);
+  color: var(--burgundy);
+  font-size: 4rem;
+}
+
+.host-name {
+  font-family: var(--ff-display);
+  font-size: 1.4rem;
+  color: var(--burgundy);
+  text-align: center;
+}
+.host-title-text {
+  font-size: .72rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  text-align: center;
+}
+
+.host-years {
+  display: inline-flex;
+  align-items: baseline;
+  gap: .3rem;
+  margin-bottom: 1.5rem;
+}
+.host-years-num {
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  color: var(--gold);
+  line-height: 1;
+  font-weight: 600;
+}
+.host-years-text {
+  font-family: var(--ff-cormo);
+  font-size: 1.1rem;
+  color: var(--text-mid);
+  font-style: italic;
+}
+
+.host-bio {
+  font-size: 1rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 2rem;
+}
+
+.host-mission {
+  background: linear-gradient(135deg, rgba(242,218,218,.4), rgba(245,234,232,.6));
+  border-left: 3px solid var(--gold);
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0 4px 4px 0;
+}
+.host-mission p {
+  font-family: var(--ff-cormo);
+  font-size: 1.1rem;
+  font-style: italic;
+  color: var(--burgundy);
+  line-height: 1.6;
+}
+
+.technique-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .6rem;
+}
+.technique-tag {
+  font-size: .72rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--burgundy);
+  border: 1px solid rgba(123,32,53,.25);
+  padding: .4rem .9rem;
+  border-radius: 20px;
+  background: rgba(242,218,218,.3);
+  transition: all .25s;
+}
+.technique-tag:hover {
+  background: var(--burgundy);
+  color: var(--white);
+  border-color: var(--burgundy);
+}
+
+/* ─── WHAT YOU GET ───────────────────────────────────────── */
+.offer-section {
+  background: var(--white);
+}
+.offer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+.offer-card {
+  position: relative;
+  background: var(--cream);
+  border: 1px solid rgba(201,169,110,.2);
+  padding: 2.5rem 2rem;
+  border-radius: 2px;
+  transition: transform .3s, box-shadow .3s;
+  overflow: hidden;
+}
+.offer-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold-d), var(--gold-l), var(--gold-d));
+  transform: scaleX(0);
+  transition: transform .4s ease;
+}
+.offer-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(123,32,53,.12); }
+.offer-card:hover::after { transform: scaleX(1); }
+
+.offer-number {
+  font-family: var(--ff-display);
+  font-size: 3.5rem;
+  color: rgba(201,169,110,.2);
+  line-height: 1;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-weight: 700;
+}
+.offer-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.offer-title {
+  font-family: var(--ff-display);
+  font-size: 1.25rem;
+  color: var(--burgundy);
+  margin-bottom: .5rem;
+}
+.offer-technique {
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: 1rem;
+}
+.offer-desc {
+  font-size: .93rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+}
+
+/* ─── PROGRAM TIMELINE ───────────────────────────────────── */
+.program-section {
+  background: var(--blush);
+}
+.timeline {
+  position: relative;
+  margin-top: 3.5rem;
+  padding-left: clamp(2rem, 5vw, 4rem);
+}
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0; bottom: 0;
+  left: 16px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--gold), rgba(201,169,110,.1));
+}
+@media (min-width: 768px) {
+  .timeline { padding-left: 5rem; }
+  .timeline::before { left: 24px; }
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+
+.timeline-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: .3rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 2px solid var(--gold);
+  box-shadow: 0 0 0 4px rgba(201,169,110,.15);
+  transition: background .3s, box-shadow .3s;
+}
+@media (min-width: 768px) { .timeline-dot { left: -3.2rem; } }
+.timeline-item:hover .timeline-dot {
+  background: var(--gold);
+  box-shadow: 0 0 0 6px rgba(201,169,110,.2);
+}
+
+.timeline-label {
+  font-size: .68rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold-d);
+  margin-bottom: .4rem;
+}
+.timeline-heading {
+  font-family: var(--ff-display);
+  font-size: clamp(1.1rem, 2.5vw, 1.35rem);
+  color: var(--burgundy);
+  margin-bottom: .6rem;
+}
+.timeline-text {
+  font-size: .93rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  max-width: 560px;
+}
+.timeline-final {
+  background: var(--burgundy);
+  color: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  position: relative;
+}
+.timeline-final .timeline-label { color: var(--gold-l); }
+.timeline-final .timeline-heading { color: var(--white); }
+.timeline-final .timeline-text { color: rgba(255,253,249,.8); }
+
+/* ─── PRIZES ─────────────────────────────────────────────── */
+.prizes-section {
+  background: var(--cream);
+}
+.prizes-intro {
+  font-family: var(--ff-cormo);
+  font-size: clamp(1.1rem, 2.2vw, 1.3rem);
+  font-style: italic;
+  color: var(--text-mid);
+  margin-top: .5rem;
+  margin-bottom: 3rem;
+  max-width: 600px;
+}
+.prizes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+.prize-card {
+  background: var(--white);
+  border: 1px solid rgba(201,169,110,.25);
+  padding: 1.75rem 1.5rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  transition: transform .25s, box-shadow .25s;
+}
+.prize-card:hover { transform: translateY(-3px); box-shadow: 0 8px 24px rgba(201,169,110,.15); }
+.prize-gem {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--gold-l), var(--gold));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(201,169,110,.3);
+}
+.prize-text {
+  font-size: .9rem;
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+.prize-text strong {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 1rem;
+  color: var(--burgundy);
+  margin-bottom: .25rem;
+}
+
+/* ─── QUOTE / WHY ────────────────────────────────────────── */
+.quote-section {
+  background: linear-gradient(135deg, var(--burgundy) 0%, #5A1626 100%);
+  padding: var(--section-gap) clamp(1.5rem, 5vw, 3rem);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+.quote-section::before {
+  content: '\201C';
+  position: absolute;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--ff-display);
+  font-size: 16rem;
+  color: rgba(201,169,110,.08);
+  line-height: 1;
+  pointer-events: none;
+}
+.quote-inner { max-width: 800px; margin: 0 auto; position: relative; }
+.quote-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.quote-ornament-line {
+  height: 1px;
+  width: 60px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,110,.5));
+}
+.quote-ornament-line:last-child {
+  background: linear-gradient(90deg, rgba(201,169,110,.5), transparent);
+}
+.quote-ornament-diamond {
+  width: 8px; height: 8px;
+  background: var(--gold);
+  transform: rotate(45deg);
+}
+
+.quote-text {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 3.5vw, 2.4rem);
+  color: var(--white);
+  font-style: italic;
+  line-height: 1.45;
+  margin-bottom: 2rem;
+}
+.quote-attribution {
+  font-size: .75rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--gold-l);
+  margin-bottom: 2.5rem;
+}
+.quote-support {
+  font-size: .95rem;
+  color: rgba(255,253,249,.75);
+  line-height: 1.75;
+  max-width: 620px;
+  margin: 0 auto;
+}
+.quote-support strong { color: var(--gold-l); font-weight: 400; }
+
+.not-motivation {
+  margin-top: 2.5rem;
+  padding: 1.5rem 2rem;
+  border: 1px solid rgba(201,169,110,.3);
+  border-radius: 2px;
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(4px);
+  display: inline-block;
+  max-width: 600px;
+}
+.not-motivation p {
+  font-family: var(--ff-display);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  color: var(--gold-l);
+  line-height: 1.5;
+}
+.not-motivation p span {
+  display: block;
+  margin-top: .25rem;
+  font-size: clamp(.95rem, 1.8vw, 1.1rem);
+  color: rgba(255,253,249,.9);
+  font-style: italic;
+}
+
+/* ─── REGISTRATION ───────────────────────────────────────── */
+.reg-section {
+  background: var(--blush);
+}
+.reg-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (min-width: 860px) {
+  .reg-layout { grid-template-columns: 1fr 1.2fr; gap: 5rem; }
+}
+
+.reg-info { }
+.reg-info .section-title { margin-bottom: 1.5rem; }
+.reg-info-text {
+  font-size: .95rem;
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+.reg-detail {
+  display: flex;
+  align-items: center;
+  gap: .75rem;
+  font-size: .85rem;
+  color: var(--text-mid);
+  padding: .5rem 0;
+  border-bottom: 1px solid rgba(201,169,110,.15);
+}
+.reg-detail:last-child { border-bottom: none; }
+.reg-detail-icon { color: var(--gold-d); font-size: 1rem; }
+.reg-detail strong { color: var(--burgundy); }
+
+.reg-form-wrap {
+  background: var(--white);
+  border: 1px solid rgba(201,169,110,.2);
+  padding: 2.5rem 2rem;
+  border-radius: 2px;
+  box-shadow: 0 8px 40px rgba(123,32,53,.07);
+}
+
+.form-row { margin-bottom: 1.25rem; }
+.form-label {
+  display: block;
+  font-size: .72rem;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--text-light);
+  margin-bottom: .45rem;
+}
+.form-input,
+.form-textarea {
+  width: 100%;
+  font-family: var(--ff-body);
+  font-size: .95rem;
+  color: var(--text);
+  background: var(--cream);
+  border: 1px solid rgba(201,169,110,.3);
+  border-radius: 1px;
+  padding: .75rem 1rem;
+  outline: none;
+  transition: border-color .25s, box-shadow .25s;
+  -webkit-appearance: none;
+}
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--burgundy);
+  box-shadow: 0 0 0 3px rgba(123,32,53,.08);
+  background: var(--white);
+}
+.form-input.error,
+.form-textarea.error { border-color: #C0392B; box-shadow: 0 0 0 3px rgba(192,57,43,.1); }
+
+.form-textarea { resize: vertical; min-height: 100px; }
+.form-error {
+  font-size: .78rem;
+  color: #C0392B;
+  margin-top: .35rem;
+  display: none;
+}
+.form-error.show { display: block; }
+
+.form-submit-wrap { margin-top: 1.75rem; }
+.form-note {
+  font-size: .78rem;
+  color: var(--text-light);
+  margin-top: 1rem;
+  text-align: center;
+  line-height: 1.55;
+}
+
+/* The form CTA redirects to Google Forms */
+.form-redirect-note {
+  font-size: .82rem;
+  color: var(--text-light);
+  font-style: italic;
+  text-align: center;
+  margin-top: .5rem;
+}
+
+/* Success */
+.form-success {
+  display: none;
+  text-align: center;
+  padding: 2rem;
+}
+.form-success.show { display: block; }
+.form-success-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+.form-success-title {
+  font-family: var(--ff-display);
+  font-size: 1.5rem;
+  color: var(--burgundy);
+  margin-bottom: .75rem;
+}
+.form-success-text { font-size: .95rem; color: var(--text-mid); }
+
+/* ─── FOOTER ─────────────────────────────────────────────── */
+.footer {
+  background: var(--burgundy-d);
+  color: var(--white);
+  padding: 3rem clamp(1.5rem, 5vw, 3rem);
+  text-align: center;
+}
+.footer-ornament {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+.footer-ornament-line {
+  height: 1px;
+  width: 48px;
+  background: linear-gradient(90deg, transparent, rgba(201,169,110,.4));
+}
+.footer-ornament-line:last-child { background: linear-gradient(90deg, rgba(201,169,110,.4), transparent); }
+.footer-ornament-diamond { width: 6px; height: 6px; background: var(--gold); transform: rotate(45deg); }
+
+.footer-name {
+  font-family: var(--ff-display);
+  font-size: 1.3rem;
+  margin-bottom: .3rem;
+}
+.footer-tagline {
+  font-size: .78rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--gold-l);
+  margin-bottom: 1.25rem;
+}
+.footer-social {
+  font-size: .85rem;
+  color: rgba(255,253,249,.6);
+  margin-bottom: 1.5rem;
+}
+.footer-copy {
+  font-size: .75rem;
+  color: rgba(255,253,249,.4);
+  letter-spacing: .05em;
+}
+
+/* ─── SCROLL TO TOP ──────────────────────────────────────── */
+.scroll-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  background: var(--burgundy);
+  color: var(--white);
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: opacity .3s, transform .3s, background .25s;
+  z-index: 500;
+  box-shadow: 0 4px 16px rgba(123,32,53,.3);
+}
+.scroll-top.show { opacity: 1; transform: translateY(0); }
+.scroll-top:hover { background: var(--burgundy-d); }
+
+/* ─── RESPONSIVE TWEAKS ──────────────────────────────────── */
+@media (max-width: 640px) {
+  :root { --section-gap: 80px; }
+  .hero-orb-1 { width: 320px; height: 320px; }
+  .hero-orb-2 { width: 220px; height: 220px; }
+  .hero-orb-3 { width: 120px; height: 120px; }
+  .timeline { padding-left: 2.5rem; }
+  .timeline-dot { left: -2rem; }
+}
+</style>
+</head>
+<body>
+
+<!-- ─── NAV ─────────────────────────────────────────────── -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    Cristina Mihaela Cojocaru
+    <span>Coach Spiritual &amp; Holistic</span>
+  </div>
+  <div class="nav-right">
+    <span class="nav-date">22 Martie 2026</span>
+    <a href="#inscriere" class="btn btn-primary">Rezervă locul</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ─────────────────────────────────────────────── -->
+<section class="hero" id="hero">
+  <!-- Orbits -->
+  <div class="hero-orb hero-orb-1"></div>
+  <div class="hero-orb hero-orb-2"></div>
+  <div class="hero-orb hero-orb-3"></div>
+
+  <!-- Botanical corners (SVG inline) -->
+  <svg class="hero-corner hero-corner-tl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20,180 C20,80 120,20 180,20" stroke="#7B2035" stroke-width="1.5" fill="none"/>
+    <path d="M20,180 C40,100 100,60 180,20" stroke="#C9A96E" stroke-width="1" fill="none"/>
+    <circle cx="50" cy="140" r="4" fill="#C9A96E" opacity=".6"/>
+    <circle cx="100" cy="90" r="3" fill="#7B2035" opacity=".5"/>
+    <circle cx="150" cy="45" r="4" fill="#C9A96E" opacity=".6"/>
+    <path d="M45,145 Q55,120 70,130" stroke="#7B2035" stroke-width="1" fill="none"/>
+    <path d="M100,95 Q110,75 125,85" stroke="#C9A96E" stroke-width="1" fill="none"/>
+  </svg>
+  <svg class="hero-corner hero-corner-br" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20,180 C20,80 120,20 180,20" stroke="#7B2035" stroke-width="1.5" fill="none"/>
+    <path d="M20,180 C40,100 100,60 180,20" stroke="#C9A96E" stroke-width="1" fill="none"/>
+    <circle cx="50" cy="140" r="4" fill="#C9A96E" opacity=".6"/>
+    <circle cx="100" cy="90" r="3" fill="#7B2035" opacity=".5"/>
+    <circle cx="150" cy="45" r="4" fill="#C9A96E" opacity=".6"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">Workshop de Claritate</div>
+    <div class="hero-badge">22 Martie 2026 · Ora 11:00</div>
+
+    <h1 class="hero-title">
+      Cum te influențează<br>
+      <em>2026</em> și ce poți<br>face concret
+    </h1>
+
+    <div class="hero-divider"></div>
+
+    <p class="hero-subtitle">Unde apar provocările și oportunitățile anului?</p>
+
+    <p class="hero-hook">
+      Un spațiu de claritate, transformare și direcție —<br>
+      pentru mintea, emoțiile și corpul tău
+    </p>
+
+    <div class="hero-cta-wrap">
+      <p class="countdown-label-outer">Timp rămas până la eveniment</p>
+      <div class="countdown" id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-days">00</span>
+          <span class="countdown-label">Zile</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-hours">00</span>
+          <span class="countdown-label">Ore</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-mins">00</span>
+          <span class="countdown-label">Minute</span>
+        </div>
+        <span class="countdown-sep">·</span>
+        <div class="countdown-item">
+          <span class="countdown-num" id="cd-secs">00</span>
+          <span class="countdown-label">Secunde</span>
+        </div>
+      </div>
+      <a href="https://forms.gle/UZr3uFQ9uqEPQAg78" target="_blank" rel="noopener" class="btn btn-gold" style="font-size:.85rem;padding:1rem 2.4rem;margin-top:.8rem;">
+        Rezervă Locul Tău &rarr;
+      </a>
+      <p style="font-size:.78rem;color:var(--text-light);letter-spacing:.05em;">Locurile sunt limitate</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── INTRO BAND ─────────────────────────────────────────── -->
+<div class="intro-band">
+  <div class="intro-band-inner reveal">
+    <p class="intro-band-label">Poate simți că</p>
+    <p class="intro-band-text">
+      direcția nu mai e atât de clară ca înainte, că deciziile par mai grele,
+      iar vechile repere nu mai funcționează.
+    </p>
+    <p class="intro-band-accent">
+      Nu pentru că „nu știi ce vrei" — ci pentru că trăim un context<br>
+      care se schimbă rapid și apasă exact pe zonele unde aveai nevoie de siguranță.
+    </p>
+  </div>
+</div>
+
+<!-- ─── PAIN POINTS ───────────────────────────────────────── -->
+<section class="pain-section section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Acest workshop este pentru tine dacă</div>
+      <h2 class="section-title">Simți că 2026<br><em>te provoacă diferit</em></h2>
+    </div>
+    <div class="pain-grid">
+      <div class="pain-card reveal reveal-delay-1">
+        <span class="pain-card-icon">🌫️</span>
+        <p class="pain-card-text">Simți confuzie și nu mai știi în ce direcție să mergi, deși ai mai multă informație ca niciodată.</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-2">
+        <span class="pain-card-icon">⚖️</span>
+        <p class="pain-card-text">Deciziile par mai grele, iar vechile repere și strategii nu mai funcționează cum se așteptai.</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-3">
+        <span class="pain-card-icon">🔄</span>
+        <p class="pain-card-text">Te afli în fața unui blocaj real — o situație care se repetă sau nu avansează indiferent ce faci.</p>
+      </div>
+      <div class="pain-card reveal reveal-delay-4">
+        <span class="pain-card-icon">✨</span>
+        <p class="pain-card-text">Nu cauți motivație — cauți repere reale și pași aplicabili, nu „ar trebui" ci „ce poți face concret".</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOST ──────────────────────────────────────────────── -->
+<section class="host-section section">
+  <div class="container">
+    <div class="host-layout">
+      <div class="host-photo-wrap reveal">
+        <div class="host-photo">
+          <div class="host-photo-placeholder">
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="40" cy="28" r="18" fill="rgba(123,32,53,.25)"/>
+              <path d="M10 72 C10 54 24 46 40 46 C56 46 70 54 70 72" fill="rgba(123,32,53,.2)"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <p class="host-name">Cristina Mihaela Cojocaru</p>
+          <p class="host-title-text" style="margin-top:.3rem;">Coach Spiritual &amp; Holistic</p>
+        </div>
+      </div>
+
+      <div class="reveal reveal-delay-2">
+        <div class="section-eyebrow">Despre facilitatoare</div>
+        <div class="host-years">
+          <span class="host-years-num">12+</span>
+          <span class="host-years-text">ani de experiență în transformare</span>
+        </div>
+
+        <p class="host-bio">
+          De peste 12 ani creez spații de creștere, transformare și evoluție pentru oamenii care simt că își doresc mai mult de la viață. Lucrez la rădăcina schimbării — nu la suprafața ei.
+        </p>
+        <p class="host-bio">
+          În toți acești ani am adus alături de mine experți, oameni cu experiență reală, pentru că cred în puterea lucrului integrat. Am pus în slujba oamenilor tehnicile pe care le practic de ani de zile — totul pentru ca oamenii să poată construi o viață mai ușoară, mai clară, mai împlinită.
+        </p>
+
+        <div class="host-mission">
+          <p>Misiunea mea rămâne aceeași: să creez mediul în care oamenii își pot rescrie direcția vieții din interior.</p>
+        </div>
+
+        <div class="technique-tags">
+          <span class="technique-tag">ThetaHealing</span>
+          <span class="technique-tag">Access Consciousness</span>
+          <span class="technique-tag">EFT</span>
+          <span class="technique-tag">Access Bars</span>
+          <span class="technique-tag">Numerologie</span>
+          <span class="technique-tag">FOHOW</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT YOU GET ──────────────────────────────────────── -->
+<section class="offer-section section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Ce vei primi</div>
+      <h2 class="section-title">Trei instrumente reale<br><em>pentru claritate în 2026</em></h2>
+      <p class="section-lead">Nu predicții. Nu teorie. Instrumente aplicate, personalizate pentru tine.</p>
+    </div>
+
+    <div class="offer-grid">
+      <div class="offer-card reveal reveal-delay-1">
+        <span class="offer-number">01</span>
+        <div class="offer-icon">🔢</div>
+        <div class="offer-technique">Numerologie</div>
+        <h3 class="offer-title">Analiza ta personală 2026</h3>
+        <p class="offer-desc">Înțelegi ce tip de an este 2026 din perspectivă numerologică și ce îți cere la nivel personal — oportunitățile și provocările bazate pe data ta de naștere. Primești analiza în format PDF.</p>
+      </div>
+      <div class="offer-card reveal reveal-delay-2">
+        <span class="offer-number">02</span>
+        <div class="offer-icon">💫</div>
+        <div class="offer-technique">EFT — Emotional Freedom Technique</div>
+        <h3 class="offer-title">Eliberezi un blocaj real</h3>
+        <p class="offer-desc">Lucrezi punctual cu o situație care te blochează acum, printr-un protocol EFT personalizat. O tehnică noninvazivă care permite eliberarea convingerilor și tiparelor limitative — simplu, profund, eficient.</p>
+      </div>
+      <div class="offer-card reveal reveal-delay-3">
+        <span class="offer-number">03</span>
+        <div class="offer-icon">🌿</div>
+        <div class="offer-technique">Access Bars</div>
+        <h3 class="offer-title">Eliberare fără efort mental</h3>
+        <p class="offer-desc">Eliberezi convingeri și tensiune mentală printr-o tehnică blândă de Access Bars — fără efort și fără procesare mentală. Corpul și mintea se resetează împreună, natural.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROGRAM ───────────────────────────────────────────── -->
+<section class="program-section section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Structura evenimentului</div>
+      <h2 class="section-title">Programul<br><em>zilei</em></h2>
+    </div>
+
+    <div class="timeline">
+      <div class="timeline-item reveal reveal-delay-1">
+        <div class="timeline-dot"></div>
+        <div class="timeline-label">Partea I</div>
+        <h3 class="timeline-heading">Claritate și orientare prin Numerologie</h3>
+        <p class="timeline-text">Introducere clară în numerologie și ce tip de informații pot fi citite din data de naștere. Analiză live pe o dată din sală — urmărești procesul pas cu pas. Fiecare participant primește analiza personalizată pentru 2026 în format PDF.</p>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-2">
+        <div class="timeline-dot"></div>
+        <div class="timeline-label">Partea II</div>
+        <h3 class="timeline-heading">Protocol EFT — Lucru pe o situație reală</h3>
+        <p class="timeline-text">Identificăm blocajele și convingerile recurente și lucrăm direct cu ele printr-un protocol EFT aplicat. O tehnică simplă și profundă care stimulează blând sistemul energetic pentru a elibera tiparele care te țin pe loc.</p>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-3">
+        <div class="timeline-dot"></div>
+        <div class="timeline-label">Partea III</div>
+        <h3 class="timeline-heading">Access Bars — Reset fără procesare mentală</h3>
+        <p class="timeline-text">O demonstrație și lucru cu tehnica Access Bars pentru a elibera tensiunea și convingerile stocate la nivel energetic — fără efort cognitiv. Lași să plece ceea ce te apasă, natural și blând.</p>
+      </div>
+
+      <div class="timeline-item reveal reveal-delay-4">
+        <div class="timeline-final">
+          <div class="timeline-dot" style="background:var(--gold);border-color:var(--gold-l);"></div>
+          <div class="timeline-label">Final</div>
+          <h3 class="timeline-heading">Q&amp;A + Extragere cu Premii</h3>
+          <p class="timeline-text">Sesiune de întrebări și răspunsuri — pui ordine în tot ce ai trăit. Urmează extragerea pentru tombolă cu premii speciale pentru participanți.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PRIZES ────────────────────────────────────────────── -->
+<section class="prizes-section section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section-eyebrow">Extragere cu premii</div>
+      <h2 class="section-title">Tombolă pentru<br><em>participanți</em></h2>
+      <p class="prizes-intro">La finalul evenimentului, extrageți premii cu valoare reală — sesiuni și analize personalizate care îți continuă transformarea după workshop.</p>
+    </div>
+
+    <div class="prizes-grid">
+      <div class="prize-card reveal reveal-delay-1">
+        <div class="prize-gem">🔮</div>
+        <div class="prize-text">
+          <strong>Analiză Numerologică — Karmă</strong>
+          Descoperă tiparele karmice care îți influențează realitatea actuală.
+        </div>
+      </div>
+      <div class="prize-card reveal reveal-delay-2">
+        <div class="prize-gem">🌟</div>
+        <div class="prize-text">
+          <strong>Analiză Numerologică — Misiunea Sufletului</strong>
+          Vârsta, misiunea și puterea sufletului tău decodificate.
+        </div>
+      </div>
+      <div class="prize-card reveal reveal-delay-3">
+        <div class="prize-gem">💎</div>
+        <div class="prize-text">
+          <strong>Sesiune ThetaHealing</strong>
+          Schimbare de credințe și convingeri limitative — sesiune individuală.
+        </div>
+      </div>
+      <div class="prize-card reveal reveal-delay-4">
+        <div class="prize-gem">✨</div>
+        <div class="prize-text">
+          <strong>Protocol EFT Personal</strong>
+          Un protocol EFT creat special pentru situația ta punctuală.
+        </div>
+      </div>
+      <div class="prize-card reveal reveal-delay-5">
+        <div class="prize-gem">🌸</div>
+        <div class="prize-text">
+          <strong>Sesiune FOHOW Frumusețe</strong>
+          Sesiune de înfrumusețare facială prin tehnica FOHOW.
+        </div>
+      </div>
+      <div class="prize-card reveal">
+        <div class="prize-gem">🧘</div>
+        <div class="prize-text">
+          <strong>Sesiune Access Bars — 30 min</strong>
+          Reset profund prin relaxare și eliberare energetică.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── QUOTE / WHY ───────────────────────────────────────── -->
+<section class="quote-section">
+  <div class="quote-inner reveal">
+    <div class="quote-ornament">
+      <div class="quote-ornament-line"></div>
+      <div class="quote-ornament-diamond"></div>
+      <div class="quote-ornament-line"></div>
+    </div>
+
+    <blockquote class="quote-text">
+      „Schimbarea reală nu începe cu o soluție.<br>Începe cu un spațiu în care te vezi diferit."
+    </blockquote>
+    <p class="quote-attribution">— Cristina Mihaela Cojocaru</p>
+
+    <p class="quote-support">
+      Am creat acest workshop pentru oamenii care nu mai caută predicții, ci
+      <strong>repere reale și pași aplicabili</strong>. Un spațiu în care pui ordine în ce simți,
+      înțelegi ce se întâmplă și pleci cu mai multă claritate decât ai avut când ai intrat.
+    </p>
+
+    <div class="not-motivation" style="margin: 2.5rem auto 0;">
+      <p>
+        Nu este un workshop de „motivație".
+        <span>Este un workshop de orientare.</span>
+      </p>
+      <p style="margin-top:.75rem;font-size:.9rem;color:rgba(255,253,249,.75);font-family:var(--ff-cormo);font-style:italic;line-height:1.55;">
+        Este un workshop de intrare, care creează baza pentru pașii următori — retreat sau lucru profund —
+        fără să te forțeze să decizi acum mai mult decât e necesar.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── REGISTRATION ──────────────────────────────────────── -->
+<section class="reg-section section" id="inscriere">
+  <div class="container">
+    <div class="reg-layout">
+      <div class="reg-info reveal">
+        <div class="section-eyebrow">Înscrie-te acum</div>
+        <h2 class="section-title">Rezervă<br><em>locul tău</em></h2>
+        <p class="reg-info-text">
+          Locurile sunt limitate — workshopul este gândit pentru un grup mic, pentru ca fiecare participant să beneficieze de atenție și personalizare reală.
+        </p>
+        <p class="reg-info-text">
+          Locația exactă va fi comunicată persoanelor înscrise, după confirmarea participării.
+        </p>
+
+        <div style="margin-top:2rem;">
+          <div class="reg-detail">
+            <span class="reg-detail-icon">📅</span>
+            <span><strong>Data:</strong> 22 Martie 2026</span>
+          </div>
+          <div class="reg-detail">
+            <span class="reg-detail-icon">🕐</span>
+            <span><strong>Ora:</strong> 11:00</span>
+          </div>
+          <div class="reg-detail">
+            <span class="reg-detail-icon">📍</span>
+            <span><strong>Locație:</strong> Comunicată după confirmare</span>
+          </div>
+          <div class="reg-detail">
+            <span class="reg-detail-icon">🎁</span>
+            <span><strong>Include:</strong> Analiză PDF personalizată + Protocol EFT + Access Bars + Tombolă premii</span>
+          </div>
+        </div>
+
+        <div style="margin-top:2.5rem;padding:1.5rem;background:rgba(201,169,110,.1);border:1px solid rgba(201,169,110,.25);border-radius:2px;">
+          <p style="font-size:.82rem;color:var(--text-light);margin-bottom:.5rem;letter-spacing:.1em;text-transform:uppercase;">Următoarea etapă</p>
+          <p style="font-family:var(--ff-display);font-size:1rem;color:var(--burgundy);font-style:italic;line-height:1.5;">
+            „Următorul pas nu trebuie să fie mare. Trebuie doar să fie clar."
+          </p>
+        </div>
+      </div>
+
+      <div class="reg-form-wrap reveal reveal-delay-2">
+        <div id="form-body">
+          <p style="font-family:var(--ff-display);font-size:1.2rem;color:var(--burgundy);margin-bottom:.25rem;">Formular de Înscriere</p>
+          <p style="font-size:.85rem;color:var(--text-light);margin-bottom:1.75rem;">Completează datele de mai jos pentru a rezerva locul tău.</p>
+
+          <form id="reg-form" novalidate>
+            <div class="form-row">
+              <label class="form-label" for="f-name">Nume și Prenume *</label>
+              <input class="form-input" type="text" id="f-name" name="name" placeholder="ex. Maria Ionescu" autocomplete="name" />
+              <p class="form-error" id="err-name">Te rugăm să introduci numele complet.</p>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="f-dob">Data Nașterii * <span style="font-size:.68rem;font-weight:300;">(pentru analiza numerologică)</span></label>
+              <input class="form-input" type="date" id="f-dob" name="dob" />
+              <p class="form-error" id="err-dob">Te rugăm să introduci data nașterii.</p>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="f-email">Email *</label>
+              <input class="form-input" type="email" id="f-email" name="email" placeholder="adresa@email.ro" autocomplete="email" />
+              <p class="form-error" id="err-email">Te rugăm să introduci o adresă de email validă.</p>
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="f-phone">Telefon</label>
+              <input class="form-input" type="tel" id="f-phone" name="phone" placeholder="07xx xxx xxx" autocomplete="tel" />
+            </div>
+
+            <div class="form-row">
+              <label class="form-label" for="f-wish">Ce îți dorești să schimbi în 2026? <span style="font-size:.68rem;font-weight:300;">(opțional)</span></label>
+              <textarea class="form-textarea" id="f-wish" name="wish" placeholder="Descrie pe scurt situația sau blocajul pe care dorești să îl lucrezi..."></textarea>
+            </div>
+
+            <div class="form-submit-wrap">
+              <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;font-size:.85rem;padding:1rem;">
+                Trimite Înscrierea &rarr;
+              </button>
+            </div>
+            <p class="form-note">
+              Veți primi detaliile evenimentului după confirmarea înscrierii.<br>
+              Locul este rezervat după confirmarea participării.
+            </p>
+          </form>
+        </div>
+
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">✨</div>
+          <h3 class="form-success-title">Înscrierea ta a fost trimisă!</h3>
+          <p class="form-success-text">
+            Vei fi redirecționat/ă către formularul de confirmare.<br><br>
+            Dacă redirectarea nu s-a pornit automat, apasă butonul de mai jos.
+          </p>
+          <a href="https://forms.gle/UZr3uFQ9uqEPQAg78" target="_blank" rel="noopener"
+             class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;">
+            Deschide Formularul de Confirmare
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="footer-ornament">
+    <div class="footer-ornament-line"></div>
+    <div class="footer-ornament-diamond"></div>
+    <div class="footer-ornament-line"></div>
+  </div>
+  <p class="footer-name">Cristina Mihaela Cojocaru</p>
+  <p class="footer-tagline">Coach Spiritual &amp; Holistic · Spații de Transformare</p>
+  <p class="footer-social">@cristina.cojocaru.coach</p>
+  <p class="footer-copy">© 2026 Cristina Mihaela Cojocaru — Coach Spiritual &amp; Holistic. Toate drepturile rezervate.</p>
+</footer>
+
+<!-- Scroll to top -->
+<button class="scroll-top" id="scrollTop" aria-label="Înapoi sus" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<script>
+/* ─── NAV SCROLL ──────────────────────────────────────── */
+const nav = document.getElementById('nav');
+const scrollTopBtn = document.getElementById('scrollTop');
+
+window.addEventListener('scroll', () => {
+  const y = window.scrollY;
+  nav.classList.toggle('scrolled', y > 40);
+  scrollTopBtn.classList.toggle('show', y > 400);
+});
+
+/* ─── COUNTDOWN ───────────────────────────────────────── */
+(function countdown() {
+  const target = new Date('2026-03-22T11:00:00').getTime();
+  const days   = document.getElementById('cd-days');
+  const hours  = document.getElementById('cd-hours');
+  const mins   = document.getElementById('cd-mins');
+  const secs   = document.getElementById('cd-secs');
+
+  function pad(n) { return String(n).padStart(2, '0'); }
+
+  function tick() {
+    const now  = Date.now();
+    const diff = target - now;
+    if (diff <= 0) {
+      days.textContent = hours.textContent = mins.textContent = secs.textContent = '00';
+      return;
+    }
+    const d = Math.floor(diff / 86400000);
+    const h = Math.floor((diff % 86400000) / 3600000);
+    const m = Math.floor((diff % 3600000) / 60000);
+    const s = Math.floor((diff % 60000) / 1000);
+    days.textContent  = pad(d);
+    hours.textContent = pad(h);
+    mins.textContent  = pad(m);
+    secs.textContent  = pad(s);
+  }
+  tick();
+  setInterval(tick, 1000);
+})();
+
+/* ─── INTERSECTION OBSERVER ───────────────────────────── */
+const reveals = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+  },
+  { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+);
+reveals.forEach(el => observer.observe(el));
+
+/* ─── FORM VALIDATION ─────────────────────────────────── */
+const form = document.getElementById('reg-form');
+
+function showError(inputId, errorId, show) {
+  const input = document.getElementById(inputId);
+  const error = document.getElementById(errorId);
+  if (show) {
+    input.classList.add('error');
+    error.classList.add('show');
+  } else {
+    input.classList.remove('error');
+    error.classList.remove('show');
+  }
+}
+
+// Live validation on blur
+['f-name', 'f-dob', 'f-email'].forEach(id => {
+  document.getElementById(id).addEventListener('blur', () => validateField(id));
+});
+
+function validateField(id) {
+  const val = document.getElementById(id).value.trim();
+  if (id === 'f-name') showError('f-name', 'err-name', val.length < 3);
+  if (id === 'f-dob')  showError('f-dob',  'err-dob',  !val);
+  if (id === 'f-email') showError('f-email', 'err-email', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val));
+}
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+
+  const name  = document.getElementById('f-name').value.trim();
+  const dob   = document.getElementById('f-dob').value.trim();
+  const email = document.getElementById('f-email').value.trim();
+
+  let valid = true;
+  if (name.length < 3)  { showError('f-name',  'err-name',  true); valid = false; } else { showError('f-name',  'err-name',  false); }
+  if (!dob)             { showError('f-dob',   'err-dob',   true); valid = false; } else { showError('f-dob',   'err-dob',   false); }
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) { showError('f-email', 'err-email', true); valid = false; } else { showError('f-email', 'err-email', false); }
+
+  if (!valid) return;
+
+  // Show success state and redirect to Google Form
+  document.getElementById('form-body').style.display = 'none';
+  document.getElementById('form-success').classList.add('show');
+
+  // Open Google Form in new tab
+  setTimeout(() => {
+    window.open('https://forms.gle/UZr3uFQ9uqEPQAg78', '_blank', 'noopener');
+  }, 800);
+});
+</script>
+</body>
+</html>
