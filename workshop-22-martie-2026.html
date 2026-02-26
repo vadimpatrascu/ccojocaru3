@@ -534,16 +534,6 @@ body::before {
   font-size: 5rem;
   flex-shrink: 0;
 }
-.host-photo-placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(145deg, var(--rose) 0%, var(--blush) 100%);
-  color: var(--burgundy);
-  font-size: 4rem;
-}
 
 .host-name {
   font-family: var(--ff-display);
@@ -1243,12 +1233,7 @@ body::before {
     <div class="host-layout">
       <div class="host-photo-wrap reveal">
         <div class="host-photo">
-          <div class="host-photo-placeholder">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="40" cy="28" r="18" fill="rgba(123,32,53,.25)"/>
-              <path d="M10 72 C10 54 24 46 40 46 C56 46 70 54 70 72" fill="rgba(123,32,53,.2)"/>
-            </svg>
-          </div>
+          <img src="Cristina Mihaela Cojocaru.png" alt="Cristina Mihaela Cojocaru — Coach Spiritual & Holistic" style="width:100%;height:100%;object-fit:cover;border-radius:50%;" />
         </div>
         <div>
           <p class="host-name">Cristina Mihaela Cojocaru</p>
@@ -1542,15 +1527,11 @@ body::before {
 
         <div class="form-success" id="form-success">
           <div class="form-success-icon">✨</div>
-          <h3 class="form-success-title">Înscrierea ta a fost trimisă!</h3>
+          <h3 class="form-success-title">Locul tău a fost rezervat!</h3>
           <p class="form-success-text">
-            Vei fi redirecționat/ă către formularul de confirmare.<br><br>
-            Dacă redirectarea nu s-a pornit automat, apasă butonul de mai jos.
+            Înscrierea a fost trimisă cu succes.<br><br>
+            Vei primi un email de confirmare cu detaliile evenimentului în curând.
           </p>
-          <a href="https://forms.gle/UZr3uFQ9uqEPQAg78" target="_blank" rel="noopener"
-             class="btn btn-primary" style="margin-top:1.5rem;display:inline-flex;">
-            Deschide Formularul de Confirmare
-          </a>
         </div>
       </div>
     </div>
@@ -1651,7 +1632,7 @@ function validateField(id) {
   if (id === 'f-email') showError('f-email', 'err-email', !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val));
 }
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
   e.preventDefault();
 
   const name  = document.getElementById('f-name').value.trim();
@@ -1665,14 +1646,38 @@ form.addEventListener('submit', (e) => {
 
   if (!valid) return;
 
-  // Show success state and redirect to Google Form
-  document.getElementById('form-body').style.display = 'none';
-  document.getElementById('form-success').classList.add('show');
+  const submitBtn = form.querySelector('button[type="submit"]');
+  submitBtn.textContent = 'Se trimite...';
+  submitBtn.disabled = true;
 
-  // Open Google Form in new tab
-  setTimeout(() => {
-    window.open('https://forms.gle/UZr3uFQ9uqEPQAg78', '_blank', 'noopener');
-  }, 800);
+  const data = {
+    name:  document.getElementById('f-name').value.trim(),
+    dob:   document.getElementById('f-dob').value.trim(),
+    email: document.getElementById('f-email').value.trim(),
+    phone: document.getElementById('f-phone').value.trim(),
+    wish:  document.getElementById('f-wish').value.trim(),
+    _subject: 'Înscriere Workshop 22 Martie 2026',
+    _replyto: document.getElementById('f-email').value.trim()
+  };
+
+  try {
+    const res = await fetch('https://formspree.io/terapeutcristinacojocaru@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(data)
+    });
+
+    if (res.ok) {
+      document.getElementById('form-body').style.display = 'none';
+      document.getElementById('form-success').classList.add('show');
+    } else {
+      submitBtn.textContent = 'Eroare — încearcă din nou';
+      submitBtn.disabled = false;
+    }
+  } catch {
+    submitBtn.textContent = 'Eroare — încearcă din nou';
+    submitBtn.disabled = false;
+  }
 });
 </script>
 </body>
